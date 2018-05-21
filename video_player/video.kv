@@ -1,0 +1,39 @@
+<video_player>:
+	video: _video
+	ilerleme: _ilerleme
+	Video:
+		id : _video
+		source: "opencv.mp4"
+		play: True
+		
+		
+	BoxLayout:
+		size_hint:1,0.05
+		orientation: "horizontal"
+		Button:
+			size:33,33
+			size_hint: None ,None
+			background_normal:"play.png"
+			on_press: root.oynat()
+		
+		Button:
+			size:33,33
+			size_hint: None ,None
+			background_normal:"pause.png"
+			on_press: root.pause()
+		
+		Button:
+			size:33,33
+			size_hint: None ,None
+			background_normal:"stop.png"
+			on_press: root.dur()
+		Slider:
+			id: _ilerleme
+			max:1
+			min:0
+			values: 0
+			pos_hint: {"center_x":0.5,"center_y":0.5}
+			size_hint:1,None
+			
+			
+			
